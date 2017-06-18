@@ -17,3 +17,9 @@ EXTENDED_BUILD_TYPE=OFFICIAL
 
 # Use Magisk
 DEFAULT_ROOT_METHOD := magisk
+
+# Build Fingerprint
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=fortuna3g \
+    BUILD_FINGERPRINT=samsung/fortuna3g/fortuna3g:7.1.2/NJH47B/06181925:userdebug/release-keys \
+    PRIVATE_BUILD_DESC="fortuna3g-userdebug 7.1.2 NJH47B 06181925 release-keys"

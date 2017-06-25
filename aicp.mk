@@ -15,12 +15,25 @@
 # limitations under the License.
 #
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common AICP stuff.
+$(call inherit-product, vendor/aicp/configs/common.mk)
+
+# Inherit Telephony stuff.
+$(call inherit-product, vendor/aicp/configs/telephony.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/fortuna3g/full_fortuna3g.mk)
 
 # Setup device configuration
 PRODUCT_DEVICE := fortuna3g
-PRODUCT_NAME := lineage_fortuna3g
+PRODUCT_NAME := aicp_fortuna3g
+
+
+# AICP Device Maintainer
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="Hassan Sardar (Has.007)"
+
+# Boot animation
+TARGET_SCREEN_WIDTH := 540
+TARGET_SCREEN_HEIGHT := 960
+-include vendor/aicp/configs/bootanimation.mk

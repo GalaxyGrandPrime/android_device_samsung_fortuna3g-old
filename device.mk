@@ -21,3 +21,6 @@ $(call inherit-product-if-exists, vendor/samsung/fortuna3g/fortuna3g-vendor.mk)
 
 # common fortuna
 $(call inherit-product, device/samsung/fortunaxx-common/fortunaxx.mk)
+
+# Common overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/fortuna3g/overlay
